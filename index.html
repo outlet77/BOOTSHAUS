@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootshaus Neckarsulm | Exklusive Gastronomie am Wasser</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #c0a062;
+            --text-light: #f8fafc;
+            --text-dark: #1e293b;
+            --bg-soft: #f1f5f9;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        /* NAVIGATION */
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            padding: 20px 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(192, 160, 98, 0.3);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px;
+        }
+
+        .logo {
+            font-family: serif;
+            font-size: 1.6rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        /* HERO SECTION */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .hero h1 { font-family: serif; font-size: 4rem; margin: 0; letter-spacing: 4px; }
+        .hero p { font-size: 1.4rem; margin: 20px 0 40px; font-weight: 300; }
+
+        .btn {
+            padding: 15px 40px;
+            border: 1px solid var(--accent);
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: 0.3s;
+            background: rgba(192, 160, 98, 0.1);
+        }
+
+        .btn:hover { background: var(--accent); color: var(--primary); }
+
+        /* WILLKOMMEN */
+        .welcome {
+            padding: 100px 20px;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .welcome h2 { font-family: serif; font-size: 2.5rem; color: var(--primary); }
+        .welcome hr { width: 50px; border: 1px solid var(--accent); margin: 20px auto; }
+
+        /* FEATURES / LINKS ZU UNTERSEITEN */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+            background: var(--primary);
+        }
+
+        .feature-item {
+            height: 450px;
+            position: relative;
+            overflow: hidden;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px;
+        }
+
+        .feature-item img {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            opacity: 0.4;
+            transition: transform 0.6s, opacity 0.6s;
+            z-index: 1;
+        }
+
+        .feature-item:hover img { transform: scale(1.1); opacity: 0.2; }
+
+        .feature-content { position: relative; z-index: 2; }
+        .feature-content h3 { font-family: serif; font-size: 1.8rem; margin-bottom: 15px; }
+        .feature-link { 
+            color: var(--accent); 
+            text-decoration: none; 
+            font-weight: bold; 
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 5px;
+        }
+
+        /* INFO SEKTION */
+        .info-bar {
+            background: var(--bg-soft);
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .info-box h4 { text-transform: uppercase; color: var(--accent); margin-bottom: 15px; }
+
+        footer {
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            text-align: center;
+            font-size: 0.9rem;
+            border-top: 1px solid var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            .features { grid-template-columns: 1fr; }
+            .nav-container { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; font-size: 0.7rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <div class="logo">Bootshaus</div>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="speisekarte.html">Speisekarte</a>
+                <a href="mittagstisch.html">Mittagstisch</a>
+                <a href="festlichkeiten.html">Festlichkeiten</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h1>BOOTSHAUS</h1>
+        <p>Kulinarik trifft Atmosphäre in Neckarsulm</p>
+        <a href="speisekarte.html" class="btn">Karte ansehen</a>
+    </section>
+
+    <section class="welcome">
+        <h2>Willkommen am Kanal</h2>
+        <hr>
+        <p>Erleben Sie im Bootshaus Neckarsulm eine ehrliche, regionale Küche in einem Ambiente, das zum Verweilen einlädt. Ob in unserem stilvollen Innenraum oder auf der großzügigen Terrasse direkt am Wasser – wir bereiten Ihnen unvergessliche Momente.</p>
+    </section>
+
+    <section class="features">
+        <div class="feature-item">
+            <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Speisekarte">
+            <div class="feature-content">
+                <h3>Abendkarte</h3>
+                <p>Von saftigem Rostbraten bis zu hausgemachten Burgern.</p>
+                <a href="speisekarte.html" class="feature-link">Zur Auswahl</a>
+            </div>
+        </div>
+        <div class="feature-item">
+            <img src="https://images.unsplash.com/photo-1547573854-74d2a71d0826?auto=format&fit=crop&w=800&q=80" alt="Mittagstisch">
+            <div class="feature-content">
+                <h3>Mittagstisch</h3>
+                <p>Unsere wöchentlich wechselnden Tagesessen für Ihre Pause.</p>
+                <a href="mittagstisch.html" class="feature-link">Wochenplan</a>
+            </div>
+        </div>
+        <div class="feature-item">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=800&q=80" alt="Feste">
+            <div class="feature-content">
+                <h3>Ihre Feier</h3>
+                <p>Der perfekte Ort für Hochzeiten, Geburtstage und Events.</p>
+                <a href="festlichkeiten.html" class="feature-link">Menüvorschläge</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="info-bar">
+        <div class="info-box">
+            <h4>Anschrift</h4>
+            <p>Kanalstraße 16<br>74172 Neckarsulm</p>
+        </div>
+        <div class="info-box">
+            <h4>Kontakt</h4>
+            <p>Tel: 07132 / 7342<br>Mail: bootshausnsu@gmail.com</p>
+        </div>
+        <div class="info-box">
+            <h4>Öffnungszeiten</h4>
+            <p>Di - Do: 11:00 - 22:00 Uhr<br>Fr - Sa: bis 00:00 Uhr geöffnet</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Bootshaus Neckarsulm | Exklusive Gastronomie</p>
+    </footer>
+
+</body>
+</html>

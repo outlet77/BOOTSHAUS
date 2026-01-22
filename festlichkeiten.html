@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festlichkeiten | Bootshaus Neckarsulm</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #c0a062;
+            --text: #334155;
+            --bg-light: #f8fafc;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            color: var(--text);
+            background-color: var(--bg-light);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        header {
+            background: var(--primary);
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        /* HERO BEREICH */
+        .event-hero {
+            height: 400px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=1200&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .event-hero h1 { 
+            font-family: serif; 
+            font-size: 3rem; 
+            margin: 0; 
+            letter-spacing: 3px;
+        }
+
+        /* MENÜ SEKTION */
+        .container {
+            max-width: 1000px;
+            margin: -50px auto 50px;
+            background: white;
+            padding: 50px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            border-radius: 4px;
+        }
+
+        .intro-text {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .intro-text h2 { color: var(--primary); font-family: serif; }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .menu-box {
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .menu-box:hover {
+            border-color: var(--accent);
+            transform: translateY(-5px);
+        }
+
+        .menu-box h3 {
+            color: var(--accent);
+            margin-top: 0;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .price {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+            color: var(--primary);
+        }
+
+        /* BEILAGEN LISTE */
+        .extras {
+            margin-top: 50px;
+            background: var(--primary);
+            color: white;
+            padding: 40px;
+            border-radius: 4px;
+        }
+
+        .extras h3 { color: var(--accent); margin-top: 0; }
+        
+        .extras-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .info-note {
+            font-size: 0.85rem;
+            font-style: italic;
+            margin-top: 30px;
+            color: #64748b;
+            text-align: center;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            background: #f1f5f9;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .menu-grid, .extras-grid { grid-template-columns: 1fr; }
+            .container { margin-top: 20px; padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="speisekarte.html">Speisekarte</a>
+            <a href="mittagstisch.html">Mittagstisch</a>
+            <a href="festlichkeiten.html" style="color: var(--accent)">Festlichkeiten</a>
+        </nav>
+    </header>
+
+    <div class="event-hero">
+        <h1>Feste & Feiern</h1>
+        <p>Unvergessliche Momente am Neckarkanal</p>
+    </div>
+
+    <div class="container">
+        <div class="intro-text">
+            <h2>Ihre Gastgeber für jeden Anlass</h2>
+            <p>Ob Hochzeit, Geburtstag oder Firmenjubiläum – wir bieten Ihnen den passenden kulinarischen Rahmen. Wählen Sie aus unseren bewährten Menükompositionen.</p>
+        </div>
+
+        <div class="menu-grid">
+            <div class="menu-box">
+                <h3>Menü 1</h3>
+                <p>Gemischter Braten vom Schwein und Rind, serviert mit Spätzle, Pommes und einer Auswahl an verschiedenen Salaten.</p>
+                <span class="price">15,50 € p.P.</span>
+            </div>
+
+            <div class="menu-box">
+                <h3>Menü 2</h3>
+                <p>Zartes Putenschnitzel und klassisches Schweineschnitzel mit Spätzle, Pommes und verschiedenen Salaten.</p>
+                <span class="price">15,50 € p.P.</span>
+            </div>
+
+            <div class="menu-box">
+                <h3>Menü 3</h3>
+                <p>Edle Schweinelende und Rostbrätle, dazu servieren wir Spätzle, Pommes und verschiedene Salate.</p>
+                <span class="price">20,50 € p.P.</span>
+            </div>
+
+            <div class="menu-box">
+                <h3>Menü 4</h3>
+                <p>Die große Auswahl: Schweinelende, Schweineschnitzel und Rostbrätle mit Spätzle, Pommes und Salaten.</p>
+                <span class="price">23,50 € p.P.</span>
+            </div>
+        </div>
+
+        <div class="extras">
+            <h3>Zusätzliche Beilagen</h3>
+            <p>Wählen Sie weitere Beilagen für nur 2,00 € Aufpreis pro Person:</p>
+            <div class="extras-grid">
+                <span>• Kroketten</span>
+                <span>• Kartoffelgratin</span>
+                <span>• Bratkartoffeln</span>
+                <span>• Knödel</span>
+                <span>• Rotkraut</span>
+                <span>• Frisches Gemüse</span>
+            </div>
+        </div>
+
+        <div class="info-note">
+            <p>Die Stückzahl der verschiedenen Fleischsorten wird im Vorfeld individuell mit Ihnen abgesprochen.<br>
+            Nachbestellungen werden separat abgerechnet.</p>
+            <p><strong>Kontakt für Reservierungen: 07132 / 7342</strong></p>
+        </div>
+    </div>
+
+    <footer>
+        <p><strong>Bootshaus Neckarsulm</strong> | Kanalstr. 16 | 74172 Neckarsulm</p>
+    </footer>
+
+</body>
+</html>

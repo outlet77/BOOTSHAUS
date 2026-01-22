@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vollständige Speisekarte | Bootshaus Neckarsulm</title>
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #c0a062;
+            --bg: #f8fafc;
+            --text: #334155;
+        }
+
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding-top: 80px;
+            line-height: 1.6;
+        }
+
+        header {
+            background: var(--primary);
+            padding: 15px 0;
+            position: fixed;
+            top: 0; width: 100%;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        nav a:hover { color: var(--accent); }
+
+        .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: white;
+            padding: 60px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .menu-header h1 {
+            font-family: serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .menu-section {
+            margin-bottom: 40px;
+        }
+
+        .menu-section h2 {
+            font-family: serif;
+            color: var(--accent);
+            border-bottom: 1px solid var(--accent);
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 12px;
+        }
+
+        .item-name {
+            font-weight: bold;
+            flex: 1;
+        }
+
+        .item-dots {
+            flex: 1;
+            border-bottom: 1px dotted #ccc;
+            margin: 0 10px;
+        }
+
+        .price {
+            font-weight: bold;
+            color: var(--primary);
+            white-space: nowrap;
+        }
+
+        .allergene {
+            display: block;
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: normal;
+        }
+
+        .special-box {
+            background: var(--bg);
+            padding: 20px;
+            border-left: 4px solid var(--accent);
+            margin: 20px 0;
+        }
+
+        .footer-note {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 600px) {
+            .container { padding: 20px; }
+            .item { flex-direction: column; }
+            .item-dots { display: none; }
+            .price { margin-top: 5px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="speisekarte.html" style="color: var(--accent)">Speisekarte</a>
+            <a href="mittagstisch.html">Mittagstisch</a>
+            <a href="festlichkeiten.html">Festlichkeiten</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="menu-header">
+            <h1>Speisekarte</h1>
+            <p>Frisch zubereitete Spezialitäten im Bootshaus</p>
+        </div>
+
+        <div class="menu-section">
+            <h2>Suppen</h2>
+            <div class="item">
+                <span class="item-name">Maultaschensuppe <small class="allergene">(A,C,G,I)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">4,80 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Fruchtige Currycremesuppe mit Garnele <small class="allergene">(G,B)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">5,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Karotten Ingwer Kartoffelsuppe <small class="allergene">(G,I)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">4,80 €</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Salate</h2>
+            <div class="item">
+                <span class="item-name">Fitneßsalat mit Pute <small class="allergene">(J,I)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">12,00 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Salat mit frittierten Maultaschen <small class="allergene">(I,J)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">10,20 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Salat Italia <small class="allergene">Oliven, Peperoni, Thunfisch, Ei, Zwiebeln (1,9,3,J,I,C,D)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">9,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Beilagensalat klein <small class="allergene">(I,J)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">3,00 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Beilagensalat groß <small class="allergene">(I,J)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">4,00 €</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Vegetarisch</h2>
+            <div class="item">
+                <span class="item-name">Tagliatelle mit Gemüse der Saison <small class="allergene">(A,C,I)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">12,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Gemüsemaultaschen mit Ei und Kartoffelsalat</span>
+                <span class="item-dots"></span>
+                <span class="price">8,20 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Backcamembert mit Preiselbeeren und Salat</span>
+                <span class="item-dots"></span>
+                <span class="price">9,00 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Salat mit Chili Chees Nuggets</span>
+                <span class="item-dots"></span>
+                <span class="price">10,50 €</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Fleischgerichte</h2>
+            <h3 style="font-size: 0.9rem; color: #64748b;">Vom Rind</h3>
+            <div class="item">
+                <span class="item-name">Rostbraten mit Brot <small class="allergene">(A,I,J)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">15,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Rostbraten mit Beilage & Salat <small class="allergene">(I,J)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">21,00 €</span>
+            </div>
+
+            <h3 style="font-size: 0.9rem; color: #64748b; margin-top: 20px;">Vom Schwein</h3>
+            <div class="item">
+                <span class="item-name">Schnitzel mit Brot <small class="allergene">(C,A)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">8,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Schnitzel (kleine Portion) mit Brot</span>
+                <span class="item-dots"></span>
+                <span class="price">6,20 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Schnitzel mit Beilage & Salat <small class="allergene">(I,J)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">12,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Cordon Bleu mit Beilage & Salat <small class="allergene">(A,C,I,J,G)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">15,00 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Jägerschnitzel mit Beilage & Salat <small class="allergene">(A,I,J,G)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">13,50 €</span>
+            </div>
+
+            <h3 style="font-size: 0.9rem; color: #64748b; margin-top: 20px;">Von der Pute</h3>
+            <div class="item">
+                <span class="item-name">Puten-Schnitzel pan. mit Kroketten & Salat <small class="allergene">(C,I,J,G,A)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">14,50 €</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Burger</h2>
+            <div class="item">
+                <span class="item-name">Bootshaus-Burger <small class="allergene">(3,I)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">4,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">XL Bootshaus-Burger</span>
+                <span class="item-dots"></span>
+                <span class="price">8,00 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Cheese-Burger <small class="allergene">(3,I)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">4,80 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Garnelen-Burger mit Pommes oder Salat <small class="allergene">(J,B,A)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">8,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Crispy Chicken Burger <small class="allergene">(A,C,I,J)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">8,00 €</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Steaks á 250 g</h2>
+            <div class="special-box">
+                <div class="item">
+                    <span class="item-name">Steak mit Beilagen, Dipp und Soße nach Wahl</span>
+                    <span class="item-dots"></span>
+                    <span class="price">21,00 €</span>
+                </div>
+                <p style="font-size: 0.85rem; margin-top: 10px;">
+                    <strong>Aufpreis pro 100g:</strong> 5,50 €<br>
+                    <strong>Beilagen:</strong> Ofenkartoffel, Wedges, Pommes, Salat<br>
+                    <strong>Dipp/Soße:</strong> Kräuterbutter, BBQ, Sour Cream, Pfeffersoße
+                </p>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Spezialitäten & Kleiner Hunger</h2>
+            <div class="item">
+                <span class="item-name">Schnitzelpfännle mit Maultaschen in Ei & Salat</span>
+                <span class="item-dots"></span>
+                <span class="price">12,80 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Fleischkäse mit Kartoffelsalat <small class="allergene">(C,I,L)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">8,20 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Maultaschen mit Ei und Kartoffelsalat <small class="allergene">(A,C,I,F)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">8,20 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Halbes Hähnchen mit Brötchen <small class="allergene">(Dauer 25 Min)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">9,00 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Käsespätzle mit Salatbeilage <small class="allergene">(A,C,G,I)</small></span>
+                <span class="item-dots"></span>
+                <span class="price">9,50 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Wurstsalat mit Brot <small class="allergene">(A,I) / mit Käse +1,00€</small></span>
+                <span class="item-dots"></span>
+                <span class="price">7,50 €</span>
+            </div>
+        </div>
+
+        <div class="menu-section">
+            <h2>Dessert</h2>
+            <div class="item">
+                <span class="item-name">„Heiße Liebe“ (Vanilleeis, heiße Himbeeren, Sahne)</span>
+                <span class="item-dots"></span>
+                <span class="price">4,90 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">„Schoko Traum“ (Soufflee mit Vanilleeis)</span>
+                <span class="item-dots"></span>
+                <span class="price">5,20 €</span>
+            </div>
+            <div class="item">
+                <span class="item-name">Gemischtes Eis mit Sahne</span>
+                <span class="item-dots"></span>
+                <span class="price">4,50 €</span>
+            </div>
+        </div>
+
+        <p class="footer-note">
+            Alle Preise in Euro inkl. MwSt. Allergene: A=Gluten, B=Krebstiere, C=Eier, D=Fisch, F=Soja, G=Milch, H=Nüsse, I=Sellerie, J=Senf, L=Lupine
+        </p>
+    </div>
+
+</body>
+</html>
