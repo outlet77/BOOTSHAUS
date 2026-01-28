@@ -77,7 +77,7 @@
             margin-left: 2px;
         }
 
-        /* Preis-Anzeige für Mobile (standardmäßig versteckt) */
+        /* Preis-Anzeige für Mobile (nur sichtbar wenn Tabelle gestapelt wird) */
         .mobile-price { display: none; font-weight: bold; color: var(--accent); margin-left: 5px; }
 
         .daily-list {
@@ -94,6 +94,8 @@
             border-bottom: 1px solid #f1f5f9;
         }
 
+        .list-item:last-child { border: none; }
+        .nr { font-weight: bold; color: var(--accent); margin-right: 10px; }
         .price { font-weight: bold; }
 
         .special-item {
@@ -103,6 +105,7 @@
             padding: 10px;
             margin-bottom: 15px;
             font-weight: bold;
+            color: var(--primary);
         }
 
         .note-box {
@@ -114,12 +117,19 @@
             text-align: center;
         }
 
+        .legend {
+            font-size: 0.75rem;
+            color: #64748b;
+            margin-top: 15px;
+            text-align: left;
+            line-height: 1.4;
+        }
+
         @media (max-width: 600px) {
             .container { padding: 15px; }
             .weekly-table, .weekly-table tr, .weekly-table td { display: block; width: 100%; box-sizing: border-box; }
             .weekly-table th { display: none; }
             .day-name { background: var(--primary); color: white; width: auto; padding: 10px; }
-            /* Preise auf Mobile einblenden */
             .mobile-price { display: inline; }
             .weekly-table td:not(.day-name) { padding: 12px 10px; border-bottom: none; }
             .weekly-table td:last-child { border-bottom: 1px solid #ddd; }
@@ -140,53 +150,7 @@
     <div class="container">
         <h1>Mittagstisch</h1>
         <div class="date-info">02.02.2026 - 06.02.2026</div>
+
         <p style="text-align: center;">Dienstag - Donnerstag von 11:00 - 14:00 Uhr</p>
 
         <table class="weekly-table">
-            <thead>
-                <tr>
-                    <th>Tag</th>
-                    <th>MENÜ 1 (9,00 €)</th>
-                    <th>MENÜ 2 (8,00 €)</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="day-name">Dienstag</td>
-                    <td>pan. Paprikaschnitzel mit Pommes<span class="allergen">A,C,I</span><span class="mobile-price">(9,00 €)</span></td>
-                    <td>Tagliatelle mit Blattspinat u. Gorgonzolasoße<span class="allergen">A,C,I,G</span><span class="mobile-price">(8,00 €)</span></td>
-                </tr>
-                <tr>
-                    <td class="day-name">Mittwoch</td>
-                    <td>Kassler mit Püree u. Sauerkraut<span class="allergen">A,C,I</span><span class="mobile-price">(9,00 €)</span></td>
-                    <td>Hamburger mit Pommes<span class="allergen">A,C,G</span><span class="mobile-price">(8,00 €)</span></td>
-                </tr>
-                <tr>
-                    <td class="day-name">Donnerstag</td>
-                    <td>Jägerschnitzel mit Spätzle<span class="allergen">A,C,G,I</span><span class="mobile-price">(9,00 €)</span></td>
-                    <td>Krautwickel mit Kartoffeln<span class="allergen">A,C,I</span><span class="mobile-price">(8,00 €)</span></td>
-                </tr>
-            </tbody>
-        </table>
-
-        <div class="daily-list">
-            <h2>Täglich im Angebot</h2>
-            <div class="list-item special-item">
-                <span>Tagessuppe<span class="mobile-price"></span></span>
-                <span class="price">3,50 €</span>
-            </div>
-            <div class="list-item"><span><span class="nr">1.</span> Rostbraten, Spätzle o. Pommes und Salat</span><span class="price">21,00 €</span></div>
-            <div class="list-item"><span><span class="nr">6.</span> Maultaschen mit Ei und Kartoffelsalat</span><span class="price">8,20 €</span></div>
-            <div class="list-item"><span><span class="nr">8.</span> Käsespätzle mit Salatbeilage</span><span class="price">9,50 €</span></div>
-        </div>
-
-        <div class="note-box">
-            <p><strong>Hinweis:</strong> Änderungswünsche der Beilage beim Tagesessen - Zuschlag 0,50 €!</p>
-            <p><strong>Tel: 07132 / 7342</strong></p>
-            <div style="font-size: 0.7rem; color: #64748b; margin-top: 10px; text-align: left;">
-                Allergene: A: Gluten, C: Ei, G: Milch, I: Sellerie
-            </div>
-        </div>
-    </div>
-</body>
-</html>
